@@ -1,0 +1,15 @@
+;VERGLEICH VON ZWEI LISTEN
+
+(DEFUN VERGL (L1 L2)
+(COND ((EQUAL (NULL L1) (NULL L2)) 'GLEICH)
+	  ((EQUAL (CAR L1) (CAR L2)) (VERGL (CDR L1) (CDR L2)))
+	  (T 'UNGLEICH)
+	)
+)
+
+;(VERGL '(12 24 92 12) '(12 24 92 12));-> GLEICH
+;(VERGL '() '(9 93));-> UNGLEICH
+;(VERGL '(293 283) '());-> 
+;(VERGL '(5) '(7));-> UNGLEICH
+;(VERGL '() '());-> GLEICH
+;(VERGL '(5) '(5));-> GLEICH
